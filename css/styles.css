@@ -204,8 +204,9 @@ a:hover { color: var(--accent); }
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
+  object-position: 0% 20%;
   border-radius: var(--radius);
   border: 1px solid var(--border);
 }

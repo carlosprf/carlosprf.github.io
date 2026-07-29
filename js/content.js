@@ -21,7 +21,7 @@ const translations = {
     "highlights.2.title": "Trade missions",
     "highlights.2.desc": "Institutional relations with the Malaysian Spanish Chamber of Commerce",
     "highlights.3.title": "Cross-cultural profile",
-    "highlights.3.desc": "I've worked in Spain, Poland and Malaysia, adapting to different environments and cultures",
+    "highlights.3.desc": "I've worked across different countries, adapting to diverse environments and cultures",
 
     "about.kicker": "About me",
     "about.b1": "Client management and international networking — Spanish Economic and Commercial Office (ICEX), Kuala Lumpur",
