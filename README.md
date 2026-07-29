@@ -57,17 +57,9 @@ python3 -m http.server 8000
 
 ## Contenido pendiente de completar
 
-Antes de publicar, revisa **`CONTENIDO-PENDIENTE.md`** — ahí está la lista de
-datos que faltan (proyectos de IA, marketing, libros, URL de LinkedIn, etc.)
-y las decisiones de privacidad a confirmar (teléfono y fecha de nacimiento
-del CV original).
-
-Los placeholders en el código están marcados con `[algo pendiente]` en
-`index.html` y `js/content.js` — búscalos con:
-
-```bash
-grep -rn "pendiente\|PLACEHOLDER\|completar\|fill in" index.html js/content.js
-```
+Revisa **`CONTENIDO-PENDIENTE.md`** — ahí está la lista de datos que faltan
+(URL de LinkedIn, privacidad del CV descargable, ajustes al texto de
+"Sobre mí").
 
 ## Notas técnicas
 

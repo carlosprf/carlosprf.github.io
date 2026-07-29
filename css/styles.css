@@ -1,6 +1,7 @@
 /* ============================================
    Carlos Pérez Ródenas — Portfolio
    Paleta: neutra cálida + acento terracota
+   Tipografía: pila Helvetica (sin webfonts)
    ============================================ */
 
 :root {
@@ -11,14 +12,11 @@
   --border: #E4E0D8;
   --accent: #B5654A;
   --accent-contrast: #FAF9F6;
-  --card-bg: #FFFFFF;
-  --placeholder-border: #C9866D;
 
-  --font-serif: "Fraunces", Georgia, serif;
-  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font: "Helvetica Neue", Helvetica, Arial, -apple-system, sans-serif;
 
   --container: 1120px;
-  --container-narrow: 720px;
+  --container-narrow: 680px;
 
   --radius: 10px;
   --transition: 200ms ease;
@@ -32,8 +30,6 @@
   --border: #33302B;
   --accent: #D9855F;
   --accent-contrast: #161514;
-  --card-bg: #1E1C1A;
-  --placeholder-border: #7A5040;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -45,8 +41,6 @@
     --border: #33302B;
     --accent: #D9855F;
     --accent-contrast: #161514;
-    --card-bg: #1E1C1A;
-    --placeholder-border: #7A5040;
   }
 }
 
@@ -65,27 +59,26 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: var(--font-sans);
+  font-family: var(--font);
   font-size: 17px;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   transition: background var(--transition), color var(--transition);
 }
 
-h1, h2, h3 {
-  font-family: var(--font-serif);
-  font-weight: 500;
-  line-height: 1.15;
+h1, h2 {
+  font-family: var(--font);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
   margin: 0 0 0.5em;
-  letter-spacing: -0.01em;
 }
 
-h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 600; }
-h2 { font-size: clamp(1.7rem, 3.5vw, 2.4rem); }
-h3 { font-size: 1.2rem; }
+h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); }
+h2 { font-size: clamp(1.6rem, 3.2vw, 2.2rem); }
 
 p { margin: 0 0 1em; }
-em { font-style: italic; color: var(--accent); }
+em { font-style: normal; font-weight: 600; color: var(--accent); }
 
 a {
   color: var(--text);
@@ -134,8 +127,7 @@ a:hover { color: var(--accent); }
 }
 
 .logo {
-  font-family: var(--font-serif);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.05rem;
   text-decoration: none;
   white-space: nowrap;
@@ -160,9 +152,9 @@ a:hover { color: var(--accent); }
 }
 
 .pill-btn {
-  font-family: var(--font-sans);
+  font-family: var(--font);
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.02em;
   background: transparent;
   border: 1px solid var(--border);
@@ -229,7 +221,7 @@ a:hover { color: var(--accent); }
 .headline {
   font-size: 1.15rem;
   color: var(--text-muted);
-  margin-bottom: 1em;
+  margin-bottom: 0;
 }
 
 .lede {
@@ -250,7 +242,7 @@ a:hover { color: var(--accent); }
   padding: 12px 24px;
   border-radius: 999px;
   font-size: 0.92rem;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
   transition: transform var(--transition), background var(--transition), border-color var(--transition), color var(--transition);
   border: 1px solid transparent;
@@ -281,149 +273,9 @@ a:hover { color: var(--accent); }
   margin-bottom: 0.6em;
 }
 
-.section-intro {
-  color: var(--text-muted);
-  max-width: 62ch;
-  font-size: 1.05rem;
-}
-
 /* ---------- Sobre mí ---------- */
 #sobre-mi h2 { margin-bottom: 1em; }
 #sobre-mi p { color: var(--text-muted); font-size: 1.05rem; }
-
-/* ---------- Timeline ---------- */
-.timeline {
-  list-style: none;
-  margin: 3em 0 0;
-  padding: 0;
-  border-left: 2px solid var(--border);
-}
-
-.timeline-item {
-  position: relative;
-  padding: 0 0 3em 32px;
-}
-.timeline-item:last-child { padding-bottom: 0; }
-
-.timeline-item::before {
-  content: "";
-  position: absolute;
-  left: -7px;
-  top: 6px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--accent);
-  border: 3px solid var(--bg-alt);
-}
-
-.timeline-date {
-  display: inline-block;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--accent);
-  margin-bottom: 0.4em;
-}
-
-.timeline-org {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-  margin-bottom: 0.8em;
-}
-
-.timeline-body ul {
-  margin: 0;
-  padding-left: 1.2em;
-  color: var(--text-muted);
-}
-.timeline-body li { margin-bottom: 0.4em; }
-
-.education-block {
-  margin-top: 4em;
-  padding-top: 3em;
-  border-top: 1px solid var(--border);
-}
-.education-title { margin-bottom: 1em; }
-
-.education-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 1.4em;
-}
-.education-list strong { display: block; font-size: 1rem; }
-.education-list span { color: var(--text-muted); font-size: 0.92rem; }
-
-/* ---------- Proyectos ---------- */
-.project-grid {
-  margin-top: 3em;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
-}
-
-.project-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 28px;
-  transition: transform var(--transition), border-color var(--transition);
-}
-.project-card:hover { transform: translateY(-3px); border-color: var(--accent); }
-
-.project-card-placeholder {
-  border-style: dashed;
-  border-color: var(--placeholder-border);
-  opacity: 0.75;
-}
-
-.project-tags {
-  font-size: 0.8rem;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 0.8em;
-}
-
-.project-card p:not(.project-tags) {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-}
-
-.project-card code {
-  background: var(--bg-alt);
-  padding: 1px 6px;
-  border-radius: 4px;
-  font-size: 0.85em;
-}
-
-/* ---------- Skills ---------- */
-.skills-grid {
-  margin-top: 3em;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 32px;
-}
-
-.skill-group h3 { margin-bottom: 1em; }
-
-.tag-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.tag-list li {
-  font-size: 0.85rem;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 6px 14px;
-  color: var(--text-muted);
-}
 
 /* ---------- Contacto ---------- */
 #contacto .lede { margin: 0 auto 2em; }
@@ -434,7 +286,7 @@ a:hover { color: var(--accent); }
   justify-content: center;
   flex-wrap: wrap;
   font-size: 1.05rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 .contact-links a { text-decoration: none; }
 
