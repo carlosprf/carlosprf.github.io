@@ -17,11 +17,11 @@ const translations = {
     "hero.cta.contact": "Get in touch",
 
     "highlights.1.title": "Invest in Spain",
-    "highlights.1.desc": "Facilitated meetings and institutional relations with major Malaysian multinationals",
+    "highlights.1.desc": "Facilitating meetings and institutional relations with major Malaysian multinationals",
     "highlights.2.title": "Trade missions",
     "highlights.2.desc": "Institutional relations with the Malaysian Spanish Chamber of Commerce",
-    "highlights.3.title": "3 countries",
-    "highlights.3.desc": "Spain, Poland and Malaysia — client management across different markets",
+    "highlights.3.title": "Cross-cultural profile",
+    "highlights.3.desc": "I've worked in Spain, Poland and Malaysia, adapting to different environments and cultures",
 
     "about.kicker": "About me",
     "about.b1": "Client management and international networking — Spanish Economic and Commercial Office (ICEX), Kuala Lumpur",

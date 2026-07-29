@@ -206,7 +206,7 @@ a:hover { color: var(--accent); }
   height: auto;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: var(--radius);
   border: 1px solid var(--border);
 }
 
